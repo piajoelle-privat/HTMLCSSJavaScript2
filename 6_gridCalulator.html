@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="../../../Desktop/RE17-Info1-DOM/HCID-RE-Info1-Tag2-code-clean/normalize.css">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        .calculator {
+            min-height: 100vh;
+        }
+        h1 {
+            background-color: #333;
+            color: white;
+            margin: 0;
+            padding: 1rem;
+            font-size: 4rem;
+        }
+        button {
+            font-size: 2rem;
+            border: 1px solid #333;
+        }
+        .modifiers > button {
+            background-color: #ccc;
+        }
+        .operations > button {
+            background-color: orange;
+        }
+        .digits > button, .last > button {
+            background-color: #efefef;
+        }
+
+        .calculator {
+            display: grid;
+            grid-template-rows: 100px repeat(5, 1fr);
+            grid-template-areas:
+                    "total total total total"
+                    "modif modif modif oper"
+                    "digit digit digit oper"
+                    "digit digit digit oper"
+                    "digit digit digit oper"
+                    "last  last  last  oper";
+        }
+        h1 {
+            grid-area: total;
+            text-align: right;
+            line-height: 80px;
+            vertical-align: middle;
+            padding-bottom: 0;
+        }
+        .modifiers, .operations, .digits, .last {
+            display: grid;
+        }
+        .modifiers {
+            grid-area: modif;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .operations {
+            grid-area: oper;
+        }
+        .last {
+            grid-area: last;
+            grid-template-columns: 2fr 1fr;
+        }
+        .digits {
+            grid-area: digit;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @media screen and (min-height: 500px) {
+            .calculator {
+                grid-template-areas:
+                        "total total total total"
+                        "digit digit digit oper"
+                        "digit digit digit oper"
+                        "digit digit digit oper"
+                        "last  last  last  oper"
+                        "modif modif modif oper";
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="calculator">
+    <h1>0</h1>
+    <div class="digits">
+        <button data-digit="9">9</button>
+        <button data-digit="8">8</button>
+        <button data-digit="7">7</button>
+        <button data-digit="6">6</button>
+        <button data-digit="5">5</button>
+        <button data-digit="4">4</button>
+        <button data-digit="3">3</button>
+        <button data-digit="2">2</button>
+        <button data-digit="1">1</button>
+    </div>
+    <div class="last">
+        <button data-digit="0">0</button>
+        <button>.</button>
+    </div>
+    <div class="modifiers">
+        <button data-mod="AC">AC</button>
+        <button data-mod="+/-">+/-</button>
+        <button data-mod="%">%</button>
+    </div>
+    <div class="operations">
+        <button data-op="/">&divide</button>
+        <button data-op="X">X</button>
+        <button data-op="-">-</button>
+        <button data-op="+">+</button>
+        <button data-op="=">=</button>
+    </div>
+
+</div>
+<script>
+    function display (displayStr) {
+    }
+    display ('hallo')
+
+    function disableAllOpBtns() {
+
+        let operationbuttons = document.querySelectorAll('.operations button');
+
+        for (let i=0; operationbuttons.length i++)
+            if
+    }
+</script>
+</body>
+</html>

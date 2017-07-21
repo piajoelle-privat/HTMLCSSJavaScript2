@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script> window.onload = function(){alert(document.getElementById("p1"))} </script>
+
+<h1>Hello World</h1>
+
+ <p id="p1">
+
+    This is some <em>important</em> text about Zürich.
+
+</p>
+
+<input id="in1" type="text">
+
+<p id="p2">
+
+    one more <em>exciting</em> thing
+
+</p>
+<script type="text/javascript">
+
+    function getInputElement() {
+        return document.getElementById("in1");
+    }
+
+    function printEvent (event) {
+        console.log(event)
+    }
+
+    getInputElement().addEventListener("click", printEvent);
+
+    getInputElement().addEventListener("keyup", function (Dasisteinparameter) {
+        console.log(Dasisteinparameter)
+    });
+
+</script>
+
+</body>
+
+</html>
