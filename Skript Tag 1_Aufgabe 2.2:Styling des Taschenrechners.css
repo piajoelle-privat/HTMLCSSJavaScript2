@@ -1,0 +1,20 @@
+#ErsteReihe {
+    background-color: black;
+    text-align: right;
+    color: white;
+    height: 25px;
+    width: 150px;
+}
+
+button {
+    background-color: lightgrey;
+}
+
+.operation {
+    background-color: orange;
+}
+
+.box {
+
+}
+
